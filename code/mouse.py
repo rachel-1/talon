@@ -283,7 +283,7 @@ def on_pop(active):
         stop_scroll()
     elif (
         not eye_zoom_mouse.zoom_mouse.enabled
-        and eye_mouse.mouse.attached_tracker is not None
+        #and eye_mouse.mouse.attached_tracker is not None
     ):
         if setting_mouse_enable_pop_click.get() >= 1:
             ctrl.mouse_click(button=0, hold=16000)

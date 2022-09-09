@@ -132,4 +132,4 @@ os: linux
 @ctx_linux.action_class("user")
 class UserActionsLinux:
     def screenshot_selection():
-        actions.key("shift-printscr")
+        actions.key("ctrl-shift-printscr")
