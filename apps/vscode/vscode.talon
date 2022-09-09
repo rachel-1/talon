@@ -10,6 +10,8 @@ tag(): user.command_search
 
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
+window switch:
+    key(ctrl-w)
 #multiple_cursor.py support end
 
 go view [<user.text>]:
@@ -148,6 +150,17 @@ close all tabs: user.vscode("workbench.action.closeAllEditors")
 close tabs way right: user.vscode("workbench.action.closeEditorsToTheRight")
 close tabs way left: user.vscode("workbench.action.closeEditorsToTheLeft")
 
+search [<user.word>]:
+    key(cmd-f)
+    sleep(100ms)
+    insert(word or "")
+
+right:
+    key(cmd-alt-right)
+
+left:
+    key(cmd-alt-left)
+    
 # Folding
 fold that: user.vscode("editor.fold")
 unfold that: user.vscode("editor.unfold")
@@ -287,3 +300,20 @@ cell run: user.vscode("notebook.cell.execute")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+
+publish:
+    user.vscode("workbench.action.terminal.focus")
+    sleep(0.1)
+    auto_insert("bonsai publish --draft --no-validation")
+    key(enter)
+
+break:
+    auto_insert("import pdb; pdb.set_trace()")
+
+switch:
+    key(ctrl-w)
+    sleep(0.1)
+    key(enter)
+
+header:
+    user.vscode("clangd.switchheadersource")

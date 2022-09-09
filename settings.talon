@@ -74,6 +74,8 @@ settings():
     user.double_pop_speed_minimum = 0.1
     user.double_pop_speed_maximum = 0.3
 
+    speech.timeout = 0.750
+
     # Uncomment to add a directory (relative to the Talon user dir) with additional
     # .snippet files. Changing this setting requires a restart of Talon.
     # user.snippets_dir = "snippets"
@@ -126,3 +128,4 @@ settings():
 # Uncomment the below to enable the experimental window layout commands
 # defined in window_layout.talon
 # tag(): user.experimental_window_layout
+# tag(): user.cursorless_use_community_snippets

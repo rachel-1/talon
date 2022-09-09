@@ -6,6 +6,7 @@ next (workspace | server): user.messaging_workspace_next()
 channel: user.messaging_open_channel_picker()
 channel <user.text>:
     user.messaging_open_channel_picker()
+    sleep(1.0)
     insert(user.formatted_text(user.text, "ALL_LOWERCASE"))
 channel up: user.messaging_channel_previous()
 channel down: user.messaging_channel_next()

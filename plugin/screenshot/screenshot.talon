@@ -1,10 +1,10 @@
 not tag: user.screenshot_disabled
 -
 
-^grab screen$: user.screenshot()
+^grab entire screen$: user.screenshot()
 ^grab screen <number_small>$: user.screenshot(number_small)
 ^grab window$: user.screenshot_window()
-^grab selection$: user.screenshot_selection()
+^grab screen$: user.screenshot_selection()
 ^grab selection clip$: user.screenshot_selection_clip()
 ^grab settings$: user.screenshot_settings()
 ^grab screen clip$: user.screenshot_clipboard()

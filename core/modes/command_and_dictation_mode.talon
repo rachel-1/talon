@@ -11,3 +11,12 @@ mode: dictation
     mode.disable("sleep")
     mode.disable("dictation")
     mode.enable("command")
+^mixed mode$:
+  mode.disable("sleep")
+  mode.enable("dictation")
+  mode.enable("command")
+^vignette mode$:
+  mode.disable("sleep")
+  mode.disable("dictation")
+  mode.disable("command")
+  mode.enable("vignette")

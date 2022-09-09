@@ -47,13 +47,13 @@ indent [more]: edit.indent_more()
 (indent less | out dent): edit.indent_less()
 
 # Copy
-copy that: edit.copy()
+copy: edit.copy()
 
 # Cut
-cut that: edit.cut()
+cut: edit.cut()
 
 # Paste
-(pace | paste) (that | it): edit.paste()
+(pace | paste): edit.paste()
 (pace | paste) enter:
     edit.paste()
     key(enter)

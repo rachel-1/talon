@@ -1,0 +1,18 @@
+name: printStatement
+description: Print statement
+phrase: print
+insertionScope: statement
+
+$variable.wrapperPhrase: print
+$variable.wrapperScope: token
+---
+
+language: cpp
+-
+std::cout << "$variable: " << $variable << std::endl;
+---
+
+language: python
+-
+print(f"$variable: {$variable}")
+---
