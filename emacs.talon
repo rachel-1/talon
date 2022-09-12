@@ -1,6 +1,12 @@
 app: kitty
 app: Emacs27
+app: Emacs
 -
+undo:
+    key(ctrl-?)
+close:
+    key(ctrl-x)
+    key(ctrl-c)
 magit:
     key(ctrl-x)
     key(g)
