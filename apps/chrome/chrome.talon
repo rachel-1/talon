@@ -1,8 +1,12 @@
-app.name: Google-chrome-stable
+app.name: Google Chrome
 -
-PR:
-    app.tab_open()
-    browser.go("https://github.com/pulls")
+#PR:
+#    app.tab_open()
+#    browser.go("https://github.com/pulls")
+question asked:
+    auto_insert("Naive solution test lists and sorting, while more optimized approach uses a heap. The extension questions get into using a map for deduplication, unit testing, and databases. While on the easier side this question can get tricky with all the edge cases so a very strong candidate can show off their ability to create clean abstractions.")
+scorecard:
+    auto_insert("""\nNotes\n+ is a positive signal, - is negative, and ++ or -- means the candidate was much better or much worse than similar candidates who have been presented with this question. Each bullet is of the form "The candidate..."\nResume Review (focused on )\nCoding question ()\n""")
 # vimium specific functionality
 take <user.word>:
     key(/)
@@ -21,4 +25,20 @@ take <user.word>:
 #hello talon:
 #mode.enable("dictation")
 #mode.disable("command")
+search <user.word>:
+     key(cmd-f)
+     sleep(0.5)
+     auto_insert(word)
+     
+link <user.raw_prose>:
+     key(cmd-k)
+     sleep(0.1)
+     key(cmd-v)
+     key(shift-tab)
+     auto_insert(raw_prose)
+     key(enter)
 
+back:
+    key(alt-w)
+     
+     

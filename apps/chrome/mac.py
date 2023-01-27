@@ -74,6 +74,9 @@ class BrowserActions:
     def reload_hard():
         actions.key("cmd-shift-r")
         # action(browser.reload_hardest):
+        
+    def search():
+        actions.key("cmd-f")
 
     def show_clear_cache():
         actions.key("cmd-shift-delete")

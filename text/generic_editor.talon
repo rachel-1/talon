@@ -149,6 +149,12 @@ clear all:
     edit.select_all()
     edit.delete()
 
+# replacing
+fix <user.word>:
+    edit.delete_word()
+    auto_insert(user.word)
+    #insert(" ")
+    
 #copy commands
 copy all:
     edit.select_all()
@@ -220,3 +226,9 @@ cut line:
 (pace | paste) all:
   edit.select_all()
   edit.paste()
+
+paste:
+  edit.paste()
+
+copy:
+  edit.copy()

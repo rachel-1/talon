@@ -19,7 +19,14 @@ focus (move | next): key(ctrl-`)
 (element | bit) (previous | last): key(shift-tab)
 (slack | lack) (my stuff | activity): key(cmd-shift-m)
 (slack | lack) directory: key(cmd-shift-e)
-(slack | lack) (starred [items] | stars): key(cmd-shift-s)
+#(slack | lack) (starred [items] | stars): key(cmd-shift-s)
+saved:
+    key(cmd-shift-s)
+    sleep(0.4s)
+    key(f6)
+    key(tab)
+    key(end)
+    key(end)    
 (slack | lack) unread [messages]: key(cmd-shift-a)
 (go | undo | toggle) full: key(ctrl-cmd-f)
 # Messaging
@@ -49,6 +56,14 @@ emote <user.text>: "{text}"
 toggle left sidebar: key(cmd-shift-d)
 toggle right sidebar: key(cmd-.)
 
+link <user.text>:
+    key('[')
+    insert(user.text)
+    key("]")
+    key("(")
+    key(cmd-v)
+    key(")")
+    
 # DEPRECATED
 (move | next) focus:
     app.notify("please use the voice command 'focus next' instead of 'next focus'")
