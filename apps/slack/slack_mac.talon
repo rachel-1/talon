@@ -22,7 +22,7 @@ focus (move | next): key(ctrl-`)
 #(slack | lack) (starred [items] | stars): key(cmd-shift-s)
 saved:
     key(cmd-shift-s)
-    sleep(0.4s)
+    sleep(0.4)
     key(f6)
     key(tab)
     key(end)

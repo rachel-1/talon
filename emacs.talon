@@ -11,12 +11,15 @@ close:
     key(ctrl-x)
     key(ctrl-c)
 magit:
-    key(ctrl-x)
+    key(ctrl-x) 
     key(g)
+work tree:
+    key(ctrl-x)
+    key(w)
 branch <phrase>:
     key(b)
     key(c)
-    insert("master")
+    insert("latest")
     key(enter)
     insert("rachel-1/")
     insert(user.formatted_text(phrase, "snake"))
@@ -35,17 +38,6 @@ commit:
     insert("magit-stage-and-commit")
     key("enter")
     key(c)
-publish:
-    key(alt-x)
-    insert("magit-git-command")
-    key("enter")
-    sleep(0.1)
-    key(backspace)
-    key(backspace)
-    key(backspace)
-    key(backspace)
-    insert("bonsai publish")
-    key(enter)    
 other:
     key(ctrl-x)
     key(o)
@@ -87,18 +79,24 @@ other buffer:
     key(b)
     key(enter)
 shell:
-    key(ctrl-x)
-    key(b)
-    auto_insert("*shell*")
-    key(enter)
+    #key(ctrl-x)
+    #key(b)
+    #auto_insert("*shell*")
+    #key(enter)
     #key(alt-x)
     #insert("get-shell")
     #key("enter")
+    key(f8)
 shell two:
-    key(ctrl-x)
-    key(b)
-    auto_insert("*shell*<2>")
-    key(enter)    
+    #key(ctrl-x)
+    #key(b)
+    #auto_insert("*shell*<2>")
+    #key(enter)
+    key(f9)  
+shell three:
+    key(f10)
+shell four:
+    key(f11)
 previous:
     key(alt-p)
 comment <user.raw_prose>:
@@ -130,9 +128,9 @@ paste:
 lint:
     key(ctrl-c)
     key(;)
-run <user.word>:
+run <user.raw_prose>:
     key(alt-r)
-    insert(word)
+    insert(raw_prose)
 end:
     key(alt->)
 snippet list:
@@ -191,13 +189,64 @@ right:
     key(alt-right)
 left:
     key(alt-left)
-        
-node:
+node <user.raw_prose>:
     key(ctrl-x)
     key(ctrl-b)
+    auto_insert(raw_prose)
 
 repo search <user.word>:
     key(alt-x)
     insert("projectile-grep")
     key(enter)
     auto_insert(word)
+
+temp:
+    auto_insert("/tmp/a")
+
+visualize:
+    auto_insert("visualize_track_vignettes ")
+
+dump:
+    insert("blobstore cat ")
+    sleep(1s)
+    key(ctrl-shift-v)
+    key(enter)
+
+full:
+    key(ctrl-x 1)
+
+take <user.number_key>:
+    key(ctrl-u)
+    auto_insert(number_key)
+    key(ctrl-c)
+    key(.)
+
+top:
+    key(ctrl-s)
+    auto_insert("platform")
+    key(enter)
+    key(ctrl-l)
+    key(ctrl-l)
+
+list:
+    auto_insert("blobstore ls ")
+    sleep(1s)
+    key(ctrl-shift-v)
+    key(enter)
+
+filter:
+    auto_insert("| awk_all_but_first -F'\\t' '$")
+
+cat:
+    auto_insert("blobstore cat ")
+    key(ctrl-y)
+
+calls:
+    auto_insert("| list_cols")
+    key(enter)
+
+print:
+    auto_insert("print_track")
+    key(tab)
+    key(ctrl-shift-v)
+    key(enter)

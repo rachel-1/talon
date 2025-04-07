@@ -1,0 +1,7 @@
+-
+user:
+    insert("rgardner@aurora.tech")
+
+pass:
+    insert("Balloonsnakemountain0!")
+    key(enter)

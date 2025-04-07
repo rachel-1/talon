@@ -43,6 +43,8 @@ settings():
     # "command history more" to display all of them, "command history less" to restore
     user.command_history_size = 50
 
+    speech.timeout = 0.750
+    
     # Uncomment the below to enable context-sensitive dictation. This determines
     # how to format (capitalize, space) dictation-mode speech by selecting &
     # copying surrounding text before inserting. This can be slow and may not

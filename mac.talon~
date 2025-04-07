@@ -1,0 +1,14 @@
+os: mac
+-
+tile right:
+    key(ctrl-alt-down)
+    key(ctrl-alt-right)
+tile left:
+    key(ctrl-alt-down)
+    key(ctrl-alt-left)
+fullscreen:
+    key(ctrl-alt-up)
+undo:
+    key(cmd-z)
+cut:
+    key(cmd-x)

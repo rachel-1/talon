@@ -67,7 +67,7 @@ class BrowserActions:
 
     def open_private_window():
         actions.key("cmd-shift-n")
-
+    
     def reload():
         actions.key("cmd-r")
 

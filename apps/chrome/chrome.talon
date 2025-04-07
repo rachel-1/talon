@@ -40,5 +40,25 @@ link <user.raw_prose>:
 
 back:
     key(alt-w)
+switch:
+    key(alt-a)
      
-     
+find [<user.raw_prose>]:
+    key(cmd-s)
+    sleep(0.1)
+    auto_insert(raw_prose or "")
+
+right:
+    key(shift-right)
+
+up:
+    key(up)
+
+go two:
+    key(cmd-2)
+
+go three:
+    key(cmd-3)
+
+scenarios:
+    auto_insert("/perception scenarios --use_proposer_amendment --rcc_tags rcc::perception:motorcyclist:fn")

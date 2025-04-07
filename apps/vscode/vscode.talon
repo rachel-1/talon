@@ -9,6 +9,8 @@ tag(): user.splits
 tag(): user.tabs
 window reload: user.vscode("workbench.action.reloadWindow")
 window close: user.vscode("workbench.action.closeWindow")
+window switch:
+    key(ctrl-w)
 #multiple_cursor.py support end
 
 please [<user.text>]:
@@ -137,6 +139,12 @@ search [<user.word>]:
     key(cmd-f)
     sleep(100ms)
     insert(word or "")
+
+right:
+    key(cmd-alt-right)
+
+left:
+    key(cmd-alt-left)
     
 # Folding
 fold that: user.vscode("editor.fold")
@@ -258,3 +266,19 @@ cell run: user.vscode("jupyter.runcurrentcell")
 
 install local: user.vscode("workbench.extensions.action.installVSIX")
 preview markdown: user.vscode("markdown.showPreview")
+`
+publish:
+    user.vscode("workbench.action.terminal.focus")
+    sleep(0.1)
+    auto_insert("bonsai publish --draft --no-validation")
+    key(enter)
+
+break:
+    auto_insert("import pdb; pdb.set_trace()")
+
+tag(): user.cursorless_experimental_snippets
+
+switch:
+    key(ctrl-w)
+    sleep(0.1)
+    key(enter)

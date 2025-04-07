@@ -150,7 +150,7 @@ clear all:
     edit.delete()
 
 # replacing
-fix <user.word>:
+change <user.word>:
     edit.delete_word()
     auto_insert(user.word)
     #insert(" ")
@@ -170,7 +170,7 @@ copy all:
 #     edit.extend_up()
 #     edit.copy()
 # copy down:
-#     edit.extend_down()
+#     edit.extend_down()g1
 #     edit.copy()
 
 copy word:
